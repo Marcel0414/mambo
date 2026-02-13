@@ -112,9 +112,17 @@
             function autorun() {                
                 loadVideos();
                 squishMuns();
+                autoSquishMun();
                 loadImages();
                 removePreloads();
                 updateCountdown();
+            }
+
+            function autoSquishMun() {
+                var counterButton = document.getElementById("counter-button");
+                setInterval(function() {
+                    counterButton.click();
+                }, 1);
             }
 
             function squishMuns() {
